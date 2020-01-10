@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_XPRTZ_Service_NetTCP", "WCF_XPRTZ_Service_NetTCP\WCF_XPRTZ_Service_NetTCP.csproj", "{2146FDA0-DDC5-4992-81E9-42AA88F114DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E136A058-EF93-4471-8F4F-52B96BC22C1E}
+	EndGlobalSection
+EndGlobal
