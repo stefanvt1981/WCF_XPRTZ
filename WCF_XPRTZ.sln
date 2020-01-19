@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_XPRTZ_Service_NetTCP", "WCF_XPRTZ_Service_NetTCP\WCF_XPRTZ_Service_NetTCP.csproj", "{2146FDA0-DDC5-4992-81E9-42AA88F114DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_XPRTZ_Service", "WCF_XPRTZ_Service_NetTCP\WCF_XPRTZ_Service.csproj", "{2146FDA0-DDC5-4992-81E9-42AA88F114DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_XPRTZ_BE", "WCF_XPRTZ_BE\WCF_XPRTZ_BE.csproj", "{F34C142D-FA81-4F85-AD9A-217CB6883EE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_XPRTZ_Client", "WCF_XPRTZ_Client\WCF_XPRTZ_Client.csproj", "{B8A4E0C9-A4A2-4256-AC53-093B63D9FD56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2146FDA0-DDC5-4992-81E9-42AA88F114DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34C142D-FA81-4F85-AD9A-217CB6883EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34C142D-FA81-4F85-AD9A-217CB6883EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34C142D-FA81-4F85-AD9A-217CB6883EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34C142D-FA81-4F85-AD9A-217CB6883EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A4E0C9-A4A2-4256-AC53-093B63D9FD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A4E0C9-A4A2-4256-AC53-093B63D9FD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A4E0C9-A4A2-4256-AC53-093B63D9FD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A4E0C9-A4A2-4256-AC53-093B63D9FD56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

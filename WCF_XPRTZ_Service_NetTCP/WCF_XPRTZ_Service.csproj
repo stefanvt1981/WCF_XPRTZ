@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2146FDA0-DDC5-4992-81E9-42AA88F114DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WCF_XPRTZ_Service_NetTCP</RootNamespace>
-    <AssemblyName>WCF_XPRTZ_Service_NetTCP</AssemblyName>
+    <RootNamespace>WCF_XPRTZ_Service</RootNamespace>
+    <AssemblyName>WCF_XPRTZ_Service</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,10 +48,19 @@
     <Compile Include="Interfaces\IXprtzService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IXprtzRepository.cs" />
+    <Compile Include="Repository\XprtEntity.cs" />
+    <Compile Include="Repository\XprtzRepository.cs" />
+    <Compile Include="Services\XprtzService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WCF_XPRTZ_BE\WCF_XPRTZ_BE.csproj">
+      <Project>{F34C142D-FA81-4F85-AD9A-217CB6883EE4}</Project>
+      <Name>WCF_XPRTZ_BE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
