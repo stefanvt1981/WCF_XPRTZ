@@ -14,7 +14,23 @@ namespace WCF_XPRTZ_Service
     {
         static void Main(string[] args)
         {
-            RunNetTCP();
+            Console.WriteLine("Kies een type binding:");
+            Console.WriteLine("1. NetTCP");
+            Console.WriteLine("2. WSHttp");
+            Console.WriteLine("Gevolgd door enter.");
+            var nr = Console.ReadLine();
+            if (nr == "1")
+            {
+                RunNetTCP();
+            }
+            else if(nr == "2")
+            {
+                RunHttp();
+            }
+            else
+            {
+                Console.WriteLine($"Input: [{nr}] niet begrepen; exiting...");
+            }
         }
 
         static void RunNetTCP()
@@ -44,6 +60,7 @@ namespace WCF_XPRTZ_Service
                 // by the service.
                 host.Open();
 
+                Console.WriteLine("Using NetTcpBinding");
                 Console.WriteLine("The service is ready at {0}", netTcpAdddress);
                 Console.WriteLine("Press <Enter> to stop the service.");
                 Console.ReadLine();
@@ -55,7 +72,39 @@ namespace WCF_XPRTZ_Service
 
         static void RunHttp()
         {
+            var httpBinding = new WSHttpBinding(SecurityMode.None)
+            {
+                //PortSharingEnabled = true
+            };
 
+            var httpAdddress = new Uri("http://localhost:8090/");
+
+            // Create the ServiceHost.
+            using (ServiceHost host = new ServiceHost(typeof(XprtzService), httpAdddress))
+            {
+                host.AddServiceEndpoint(typeof(IXprtzService), httpBinding, "XprtzService");
+
+                // Enable metadata publishing.
+                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                smb.HttpGetEnabled = true;
+                smb.HttpGetUrl = new Uri("http://localhost:8091/");
+                smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
+                host.Description.Behaviors.Add(smb);
+
+                // Open the ServiceHost to start listening for messages. Since
+                // no endpoints are explicitly configured, the runtime will create
+                // one endpoint per base address for each service contract implemented
+                // by the service.
+                host.Open();
+
+                Console.WriteLine("Using WSHttpBinding");
+                Console.WriteLine("The service is ready at {0}", httpAdddress);
+                Console.WriteLine("Press <Enter> to stop the service.");
+                Console.ReadLine();
+
+                // Close the ServiceHost.
+                host.Close();
+            }
         }
     }
 }
